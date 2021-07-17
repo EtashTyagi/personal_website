@@ -18,7 +18,6 @@
     user-select: none;
     -webkit-user-drag: none;
 }
-
 .links.footer{
     display: flex;
     flex-direction: row;
@@ -32,4 +31,7 @@
     padding-left: 12px;
     padding-right: 12px;
     color: white;
+}
+.links.footer:hover{
+    background: rgba(255, 255, 255, 0.15);
 }
