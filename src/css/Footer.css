@@ -1,0 +1,19 @@
+.dark.footer{
+    background: #3c3f41;
+    color: lightgreen;
+    transition-duration: 0.25s;
+}
+.light.footer{
+    background: #282c34;
+    color: #61dafb;
+    transition-duration: 0.25s;
+}
+
+.mainContainer.footer{
+    display: flex;
+    height: 38px;
+    flex-direction: row;
+    align-items: center;
+    user-select: none;
+    -webkit-user-drag: none;
+}
