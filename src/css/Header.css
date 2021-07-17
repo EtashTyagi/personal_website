@@ -67,7 +67,7 @@
     flex: 1 1 0;
     text-align: center;
     vertical-align: center;
-    height: 72%;
+    height: 73%;
     width: 100%;
     border: none;
     border-top: solid 12px transparent;
@@ -78,20 +78,20 @@
 .tabContainer.light{
     color: #7FF8FF;
     background: #282c34;
-    transition-duration: 0.25s;
+    transition: 0.25s;
 }
 .tabContainer.dark{
     color: #E1FFE1;
     background: #3c3f41;
-    transition-duration: 0.25s;
+    transition: 0.25s;
 }
 .tabContainer.light.selected{
     border-bottom: solid greenyellow 3px;
-    transition-duration: 0.25s;
+    transition: 0.5s;
 }
 .tabContainer.dark.selected{
     border-bottom: solid #61dafb 3px;
-    transition-duration: 0.25s;
+    transition: 0.5s;
 }
 .icon:hover{
     background: rgba(255, 255, 255, 0.15);
