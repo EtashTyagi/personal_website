@@ -2,18 +2,30 @@ import React, {useState} from 'react';
 import Header from "./Header";
 import "../css/App.css"
 import Footer from "./Footer";
-import {BrowserRouter as Router, Route} from "react-router-dom";
+import {BrowserRouter as Router, Route, Redirect, Switch} from "react-router-dom";
+import globalConstants from "./GlobalConstants";
+import Welcome from "./Welcome";
+import Home from "./Home";
 
-const tabs = ["Home", "Resume", "Projects", "About Me"];
+
 const App = () => {
     const [colorMode, setColorMode]=useState("light");
     return (
         <Router>
+            <Redirect exact to={globalConstants.rootDir}/>
             <div className={"fullHeight "+colorMode + " mainApp"}>
-                <Header setColorMode={setColorMode} tabs={tabs}/>
-                <div className={"mainContents"}>
+                <Header setColorMode={setColorMode}/>
+                <Switch>
 
-                </div>
+                    <Route exact path={globalConstants.rootDir} component={Welcome}/>
+                    {Object.keys(globalConstants.tabToComponent).map
+                    ((key, index)=>{
+                       return <Route
+                           exact path={globalConstants.rootDir+"/"+key}
+                           component={globalConstants.tabToComponent[key]}/>
+                    })}
+                </Switch>
+
                 <Footer colorMode={colorMode}/>
             </div>
         </Router>
@@ -21,3 +33,4 @@ const App = () => {
 };
 
 export default App;
+

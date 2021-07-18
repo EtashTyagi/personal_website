@@ -1,6 +1,6 @@
 .dark.mainApp {
   background: #2b2b2b;
-  color: #bababa;
+  color: whitesmoke;
   transition-duration: 0.4s;
 }
 .light.mainApp {
@@ -12,9 +12,9 @@
   min-height: 100vh;
 }
 .mainContents{
-  padding-left: 5%;
-  padding-right: 5%;
-  min-height: calc(100vh - 131px - 38px);
+  display: flex;
+  flex-direction: row;
+  min-height: calc(100vh - 131px - 86px);
   margin-bottom: 10px;
 }
 .hLine{

@@ -2,17 +2,19 @@ import React from 'react';
 import '../css/Header.css'
 import PropTypes from "prop-types";
 import {NavLink} from "react-router-dom";
+import globalConstants from "./GlobalConstants";
 
 const NavBarHeader = (props) => {
     let i=-1;
     return (
         <div className={"mainContainer "+props.colorMode+" navBarHeader"}>
-            {props.tabs.map((element)=>{
+            {Object.keys(globalConstants.tabToComponent)
+                .map((element, index)=>{
                 i++;
                 return ([
                     (i===0?<div/>:<div className={"vLine"}/>),
                     <NavLink activeClassName={"tabContainer "+ props.colorMode+" selected"}
-                             to={"/"+element} className={"tabContainer "+props.colorMode}
+                             to={globalConstants.rootDir+"/"+element} className={"tabContainer "+props.colorMode}
                              onlyActiveOnIndex>
                         {element}
                     </NavLink>
@@ -23,7 +25,6 @@ const NavBarHeader = (props) => {
 };
 NavBarHeader.propTypes = {
     colorMode: PropTypes.string,
-    tabs: PropTypes.array,
     initTab: PropTypes.number,
     setTab: PropTypes.func
 };

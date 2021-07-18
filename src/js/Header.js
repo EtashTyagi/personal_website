@@ -31,7 +31,7 @@ const Header = (props) => {
             <div style={{position: "fixed", width:"100%", transform: `translate(0px, ${positionState.headerOffset}px)` }}>
                 <TitleHeader setColorMode={newSetColorMode}/>
                 <div className={"hLine "+colorMode}/>
-                <NavBarHeader colorMode={colorMode} tabs={props.tabs}/>
+                <NavBarHeader colorMode={colorMode}/>
             </div>
             <div className={"spacer"}/>
         </div>
@@ -40,7 +40,6 @@ const Header = (props) => {
 };
 Header.propTypes = {
     setColorMode: PropTypes.func,
-    tabs: PropTypes.array,
 };
 Header.defaultProps= {
     setColorMode: () => {},

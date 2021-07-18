@@ -8,22 +8,22 @@ import hackerrankIcon from "../resources/hackerrankIcon.svg"
 import codeforcesIcon from "../resources/codeforcesIcon.svg"
 import codechefIcon from "../resources/codechefIcon.svg"
 import PropTypes from "prop-types";
+import globalConstants from "./GlobalConstants";
 
 const Footer = (props) => {
     return (
         <div>
-            <div className={"hLine "+props.colorMode}/>
             <div className={"mainContainer "+props.colorMode + " footer"}>
                 <span style={{paddingLeft:24}}>©Etash Tyagi, 2021</span>
             </div>
             <div className={"hLine "+props.colorMode}/>
             <div style={{justifyContent: "space-evenly"}} className={"mainContainer "+props.colorMode + " footer"}>
-                <SocialLinks src={githubIcon} name={"Github"} link={"https://github.com/EtashTyagi"}/>
-                <SocialLinks src={linkedinIcon} name={"LinkedIn"} link={"https://www.linkedin.com/in/etash-tyagi-19b489214/"}/>
-                <SocialLinks src={hackerrankIcon} name={"HackerRank"} link={"https://www.hackerrank.com/Etash19360"}/>
-                <SocialLinks src={codeforcesIcon} name={"Codeforces"} link={"https://codeforces.com/profile/etash"}/>
-                <SocialLinks src={codechefIcon} name={"CodeChef"} link={"https://www.codechef.com/users/etasht"}/>
-                <SocialLinks src={facebookIcon} name={"Facebook"} link={"https://facebook.com/etash.tyagi"}/>
+                <SocialLinks src={githubIcon} name={"Github"} link={globalConstants.githubLink}/>
+                <SocialLinks src={linkedinIcon} name={"LinkedIn"} link={globalConstants.linkedinLink}/>
+                <SocialLinks src={hackerrankIcon} name={"HackerRank"} link={globalConstants.hackerrankLink}/>
+                <SocialLinks src={codeforcesIcon} name={"Codeforces"} link={globalConstants.codeforcesLink}/>
+                <SocialLinks src={codechefIcon} name={"CodeChef"} link={globalConstants.codechefLink}/>
+                <SocialLinks src={facebookIcon} name={"Facebook"} link={globalConstants.facebookLink}/>
             </div>
         </div>
 
