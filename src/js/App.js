@@ -5,7 +5,6 @@ import Footer from "./Footer";
 import {BrowserRouter as Router, Route, Redirect, Switch} from "react-router-dom";
 import globalConstants from "./GlobalConstants";
 import Welcome from "./Welcome";
-import Home from "./Home";
 
 
 const App = () => {
@@ -16,7 +15,6 @@ const App = () => {
             <div className={"fullHeight "+colorMode + " mainApp"}>
                 <Header setColorMode={setColorMode}/>
                 <Switch>
-
                     <Route exact path={globalConstants.rootDir} component={Welcome}/>
                     {Object.keys(globalConstants.tabToComponent).map
                     ((key, index)=>{
