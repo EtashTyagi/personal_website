@@ -1,8 +1,8 @@
 import React from 'react';
-import '../css/Header.css'
+import '../../css/Header.css'
 import PropTypes from "prop-types";
 import {NavLink} from "react-router-dom";
-import globalConstants from "./GlobalConstants";
+import globalConstants from "../other/GlobalConstants";
 
 const NavBarHeader = (props) => {
     let i=-1;
@@ -29,6 +29,6 @@ NavBarHeader.propTypes = {
     setTab: PropTypes.func
 };
 NavBarHeader.defaultProps = {
-    colorMode: PropTypes.string
+    colorMode: "light"
 };
 export default NavBarHeader;

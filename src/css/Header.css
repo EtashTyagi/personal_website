@@ -14,23 +14,6 @@
     height: 100%;
 }
 
-@keyframes blink {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0.1;
-    }
-}
-.blinkingRectangle{
-    padding-left: 3px;
-    padding-bottom: 5px;
-    font-size: 28px;
-    transform: rotate(5deg);
-    animation: blink 0.69s infinite alternate ease-out;
-    font-family: "Segoe Print", "Comic Sans MS", sans-serif;
-}
-
 .mainContainer{
     display: flex;
     position: static;
@@ -39,6 +22,7 @@
     align-items: center;
     user-select: none;
     -webkit-user-drag: none;
+    font-family: "Segoe Print", "Comic Sans MS", sans-serif;
 }
 .mainContainer.titleHeader{
     height: 50px;
@@ -47,12 +31,11 @@
     height: 56px;
 }
 .spacer{
-    height: 120px;
+    height: 105px;
 }
 .headingText {
     padding-left: 10px;
     font-size: 28px;
-    font-family: "Segoe Print", "Comic Sans MS", sans-serif;
 }
 .icon.titleHeader {
     height: 32px;
@@ -72,7 +55,6 @@
     border: none;
     border-top: solid 12px transparent;
     font-size: 18px;
-    font-family: "Segoe Print", "Comic Sans MS", sans-serif;
     border-bottom: solid transparent 3px;
 }
 .tabContainer.light{

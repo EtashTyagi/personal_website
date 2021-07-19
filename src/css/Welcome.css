@@ -1,0 +1,51 @@
+@keyframes appear {
+    0% {
+        stroke-dashoffset: 69vmin;
+        opacity: 0;
+        fill-opacity: 0;
+    }
+    25% {opacity: 1; fill-opacity: 0;}
+    50% {fill-opacity: 0.33}
+    100% {stroke-dashoffset: 0}
+}
+.welcomeMain {
+    background-position: bottom;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+}
+.welcomeMain.light{
+    background-image: url("../resources/mountains_light.svg");
+    background-color: #FFFB77;
+    transition: 0.5s linear;
+}
+.welcomeMain.dark{
+    background-image: url("../resources/mountains_dark.svg");
+    background-color: #1b1e23;
+    transition: 0.5s linear;
+}
+.helloWorld{
+    user-select: none;
+    stroke-linejoin: round;
+    text-anchor:middle;
+    stroke-dasharray: 69vmin;
+}
+.helloWorld.animating{
+    animation: appear linear forwards alternate infinite;
+}
+.helloWorld:hover{
+    transform: translateY(-2%);
+    transition-duration: 2s;
+}
+.helloWorld.light {
+    stroke:darkblue;
+    fill: darkblue;
+    fill-opacity: 0.33;
+    transition-duration: 0.5s;
+}
+
+.helloWorld.dark {
+    stroke:lightgreen;
+    fill: lightgreen;
+    fill-opacity: 0.33;
+    transition-duration: 0.5s;
+}

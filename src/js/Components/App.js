@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import Header from "./Header";
-import "../css/App.css"
+import "../../css/App.css"
 import Footer from "./Footer";
 import {BrowserRouter as Router, Route, Redirect, Switch} from "react-router-dom";
-import globalConstants from "./GlobalConstants";
+import globalConstants from "../other/GlobalConstants";
 import Welcome from "./Welcome";
 
 
@@ -15,7 +15,9 @@ const App = () => {
             <div className={"fullHeight "+colorMode + " mainApp"}>
                 <Header setColorMode={setColorMode}/>
                 <Switch>
-                    <Route exact path={globalConstants.rootDir} component={Welcome}/>
+                    <Route exact path={globalConstants.rootDir}>
+                        <Welcome colorMode={colorMode}/>
+                    </Route>
                     {Object.keys(globalConstants.tabToComponent).map
                     ((key, index)=>{
                        return <Route
@@ -23,7 +25,6 @@ const App = () => {
                            component={globalConstants.tabToComponent[key]}/>
                     })}
                 </Switch>
-
                 <Footer colorMode={colorMode}/>
             </div>
         </Router>

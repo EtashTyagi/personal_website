@@ -1,14 +1,14 @@
 import React from 'react';
-import '../css/Footer.css'
-import "../css/App.css"
-import linkedinIcon from "../resources/linkedinIcon.svg"
-import facebookIcon from "../resources/facebookIcon.svg"
-import githubIcon from "../resources/githubIcon.svg"
-import hackerrankIcon from "../resources/hackerrankIcon.svg"
-import codeforcesIcon from "../resources/codeforcesIcon.svg"
-import codechefIcon from "../resources/codechefIcon.svg"
+import '../../css/Footer.css'
+import "../../css/App.css"
+import linkedinIcon from "../../resources/linkedinIcon.svg"
+import facebookIcon from "../../resources/facebookIcon.svg"
+import githubIcon from "../../resources/githubIcon.svg"
+import hackerrankIcon from "../../resources/hackerrankIcon.svg"
+import codeforcesIcon from "../../resources/codeforcesIcon.svg"
+import codechefIcon from "../../resources/codechefIcon.svg"
 import PropTypes from "prop-types";
-import globalConstants from "./GlobalConstants";
+import globalConstants from "../other/GlobalConstants";
 
 const Footer = (props) => {
     return (

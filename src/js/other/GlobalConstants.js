@@ -1,7 +1,7 @@
-import Home from "./Home";
-import Resume from "./Resume";
-import Projects from "./Projects";
-import AboutMe from "./AboutMe";
+import Home from "../Components/Home";
+import Resume from "../Components/Resume";
+import Projects from "../Components/Projects";
+import AboutMe from "../Components/AboutMe";
 
 const globalConstants={
     tabToComponent: {"Home":Home,

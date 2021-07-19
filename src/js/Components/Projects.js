@@ -5,7 +5,7 @@ const Projects = () => {
         <div className={"mainContents"}
              style={{alignItems: "center", justifyContent:"space-evenly",
                  fontFamily: "Segoe Print", fontSize: 69}}>
-            PROJECTS
+            Projects
         </div>
     );
 };
