@@ -4,10 +4,12 @@ import "../../css/Welcome.css";
 
 const welcomeSequence=["Hello World!", "Welcome to my website.", "Select a tab to continue."];
 const WRITE_TIME=2000;
+const WIGGLE = 10;
 const Welcome = (props) => {
     const [welcomeIndex, setWelcomeIndex] = useState(0);
     const [constructed, setConstructed] = useState(false);
     const [animating, setAnimating] = useState(true);
+    const [mouseOffset, setMouseOffset] = useState({x:0, y:0})
     if (!constructed) {
         setConstructed(()=>{
             test(setWelcomeIndex, welcomeIndex, setAnimating);
@@ -16,15 +18,29 @@ const Welcome = (props) => {
     }
     return (
         <div className={"mainContents welcomeMain "+props.colorMode}
-             style={{fontSize:"7vmin", paddingLeft:10, paddingRight: 10}}>
+             style={{fontSize:"7vmin", paddingLeft:10, paddingRight: 10,
+                 backgroundPositionX:`calc(50% + ${Math.max(-WIGGLE,
+                     Math.min(WIGGLE,mouseOffset.x))}px)`,
+                 backgroundPositionY:`calc(100% + ${Math.max(-WIGGLE,
+                     Math.min(WIGGLE,mouseOffset.y))}px)`}}
+                onMouseMove={(event)=>{
+                    setMouseOffset(()=>({x:event.movementX, y:event.movementY}))
+                }
+                }>
             <div style={{width:"100%"}}>
                 <svg xmlns="http://www.w3.org/2000/svg" width={"100%"} height={"100%"}
                      className={"helloWorld "+props.colorMode + (animating?(" animating"):(""))}
                         style={{animationDuration: `${WRITE_TIME}ms`}}>
-                    <text x={"50%"} y={"15%"} style={{strokeWidth: "0.15vmin", fontFamily:"Segoe Print", overflow:"hidden", textOverflow:"ellipsis", border:"solid red"}}>
+                    <text x={`${50+0.01*Math.max(-WIGGLE,
+                        Math.min(WIGGLE,mouseOffset.x))}%`} y={`${15+0.01*Math.max(-WIGGLE,
+                        Math.min(WIGGLE,mouseOffset.y))}%`} style={{
+                        strokeWidth: "0.15vmin",
+                        fontFamily:"Segoe Print",
+                        overflow:"hidden",
+                        textOverflow:"ellipsis",
+                        border:"solid red"}}>
                         {welcomeSequence[welcomeIndex]}
                     </text>
-
                 </svg>
             </div>
         </div>

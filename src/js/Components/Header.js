@@ -27,7 +27,7 @@ const Header = (props) => {
     }
 
     return (
-        <div>
+        <div style={{zIndex:1}}>
             <div style={{position: "fixed", width:"100%", transform: `translate(0px, ${positionState.headerOffset}px)` }}>
                 <TitleHeader setColorMode={newSetColorMode}/>
                 <div className={"hLine "+colorMode}/>

@@ -14,8 +14,8 @@
   <polygon id="svg_12" points="1210 900 971 687 725 900" fill="#aa00aa"/>
   <polygon id="svg_13" points="943 900 1210 900 971 687" fill="#880088"/>
   <polygon id="svg_14" points="1498.0015890598297,921.9999957084656 1956.0015890598297,683.9999957084656 2374.001711130142,921.9999957084656 " fill="#d6002b"/>
-  <ellipse id="sun" stroke-width="0" fill="#fefcd7" stroke="#000000" cx="750.4272" cy="432.81551" rx="80" ry="80"/>
-  <ellipse fill="#1b1e23" cx="772.0276" cy="440.81564" id="svg_16" rx="80" ry="80" stroke-width="0" stroke="#000000"/>
+  <ellipse ry="80" rx="80" id="svg_15" cy="431.81551" cx="750.4272" stroke="#000000" fill="#fefcd7" stroke-width="0"/>
+  <ellipse stroke="#000000" stroke-width="0" ry="80" rx="80" id="svg_16" cy="439.81564" cx="772.0276" fill="#1b1e23"/>
  </g>
 
 </svg>

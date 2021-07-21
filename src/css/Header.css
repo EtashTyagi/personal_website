@@ -59,12 +59,18 @@
 }
 .tabContainer.light{
     color: #7FF8FF;
-    background: #282c34;
+    background: linear-gradient(to bottom, rgba(144,238,144,0) 20%,
+    rgba(144,238,144,1));
+    background-size: 100% 750%;
+    animation: Animation2 0.4s ease forwards;
     transition: 0.25s;
 }
 .tabContainer.dark{
     color: #E1FFE1;
-    background: #3c3f41;
+    background: linear-gradient(to bottom, rgba(97,218,251,0) 20%,
+    rgba(97,218,251,1));
+    background-size: 100% 750%;
+    animation: Animation2 0.4s ease forwards;
     transition: 0.25s;
 }
 .tabContainer.light.selected{
@@ -80,18 +86,23 @@
     transition-duration: 0.25s;
 }
 @keyframes Animation {
-    0%{background-position:0 -12px}
+    0%{background-position:0 7%}
     100%{background-position:0 23%}
 }
+@keyframes Animation2 {
+    0%{background-position:0 23%}
+    100%{background-position:0 7%}
+}
+
 .tabContainer.dark:hover{
     background: linear-gradient(to bottom, rgba(97,218,251,0) 20%,
     rgba(97,218,251,1));
-    background-size: 100% 500%;
-    animation: Animation 0.35s ease forwards;
+    background-size: 100% 750%;
+    animation: Animation 0.4s ease forwards;
 }
 .tabContainer.light:hover{
     background: linear-gradient(to bottom, rgba(144,238,144,0) 20%,
     rgba(144,238,144,1));
-    background-size: 100% 500%;
-    animation: Animation 0.35s ease forwards;
+    background-size: 100% 750%;
+    animation: Animation 0.4s ease forwards;
 }

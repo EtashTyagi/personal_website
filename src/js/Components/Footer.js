@@ -12,7 +12,7 @@ import globalConstants from "../other/GlobalConstants";
 
 const Footer = (props) => {
     return (
-        <div>
+        <div style={{zIndex:1}}>
             <div className={"mainContainer "+props.colorMode + " footer"}>
                 <span style={{paddingLeft:24}}>©Etash Tyagi, 2021</span>
             </div>
