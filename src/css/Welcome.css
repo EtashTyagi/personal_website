@@ -1,19 +1,11 @@
-@keyframes appear {
-    0% {
-        stroke-dashoffset: 69vmin;
-        opacity: 0;
-        fill-opacity: 0;
-    }
+@keyframes mainTextAnimation {
+    0% {stroke-dashoffset: 69vmin;opacity: 0;fill-opacity: 0;}
     20% {opacity: 1; fill-opacity: 0;}
-    50% {fill-opacity: 0.33}
-    100% {stroke-dashoffset: 0}
+    50% {fill-opacity: 0.33;}
+    100% {stroke-dashoffset: 0;}
 }
-@keyframes test {
-    from {background-position: 50% calc(100% + var(--wiggle))}
-    to {background-position: 50%  calc(100% + var(--wiggle)*-1)}
-}
+
 .welcomeMain {
-    --wiggle: 20px;
     background-attachment: fixed;
     -webkit-background-size: cover;
 }
@@ -35,7 +27,7 @@
     stroke-dasharray: 69vmin;
 }
 .helloWorld.animating{
-    animation: appear linear forwards alternate infinite;
+    animation: mainTextAnimation linear forwards alternate infinite;
 }
 .helloWorld:hover{
     transition-duration: 2s;

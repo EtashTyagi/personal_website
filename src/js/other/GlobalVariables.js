@@ -3,7 +3,7 @@ import Resume from "../Components/Resume";
 import Projects from "../Components/Projects";
 import AboutMe from "../Components/AboutMe";
 
-const globalConstants={
+const globalVariables={
     tabToComponent: {"Home":Home,
                 "Resume": Resume,
                 "Projects": Projects,
@@ -15,6 +15,7 @@ const globalConstants={
     hackerrankLink: "https://www.hackerrank.com/Etash19360",
     codeforcesLink: "https://codeforces.com/profile/etash",
     codechefLink: "https://www.codechef.com/users/etasht",
-    facebookLink: "https://facebook.com/etash.tyagi"
+    facebookLink: "https://facebook.com/etash.tyagi",
+    colorMode: "light",
 }
-export default globalConstants;
+export default globalVariables;

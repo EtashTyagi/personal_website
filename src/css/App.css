@@ -3,9 +3,21 @@
   color: whitesmoke;
   transition-duration: 0.4s;
 }
+.svgDefault.dark{
+  fill: red;
+  stroke: yellow;
+  stroke-width: 0.25;
+  transition-duration: 0.4s;
+}
 .light.mainApp {
   background: whitesmoke;
   color: black;
+  transition-duration: 0.4s;
+}
+.svgDefault.light{
+  fill: red;
+  stroke: black;
+  stroke-width: 0.25;
   transition-duration: 0.4s;
 }
 .fullHeight{
@@ -16,6 +28,7 @@
   flex-direction: row;
   min-height: calc(100vh - 132px - 59px);
 }
+
 .hLine{
   margin: 0;
   border: none;

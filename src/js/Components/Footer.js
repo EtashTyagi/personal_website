@@ -8,22 +8,22 @@ import hackerrankIcon from "../../resources/hackerrankIcon.svg"
 import codeforcesIcon from "../../resources/codeforcesIcon.svg"
 import codechefIcon from "../../resources/codechefIcon.svg"
 import PropTypes from "prop-types";
-import globalConstants from "../other/GlobalConstants";
+import globalVariables from "../other/GlobalVariables";
 
-const Footer = (props) => {
+const Footer = () => {
     return (
         <div style={{zIndex:1}}>
-            <div className={"mainContainer "+props.colorMode + " footer"}>
+            <div className={"mainContainer "+globalVariables.colorMode + " footer"}>
                 <span style={{paddingLeft:24}}>©Etash Tyagi, 2021</span>
             </div>
-            <div className={"hLine "+props.colorMode}/>
-            <div style={{justifyContent: "space-evenly"}} className={"mainContainer "+props.colorMode + " footer"}>
-                <SocialLinks src={githubIcon} name={"Github"} link={globalConstants.githubLink}/>
-                <SocialLinks src={linkedinIcon} name={"LinkedIn"} link={globalConstants.linkedinLink}/>
-                <SocialLinks src={hackerrankIcon} name={"HackerRank"} link={globalConstants.hackerrankLink}/>
-                <SocialLinks src={codeforcesIcon} name={"Codeforces"} link={globalConstants.codeforcesLink}/>
-                <SocialLinks src={codechefIcon} name={"CodeChef"} link={globalConstants.codechefLink}/>
-                <SocialLinks src={facebookIcon} name={"Facebook"} link={globalConstants.facebookLink}/>
+            <div className={"hLine "+globalVariables.colorMode}/>
+            <div style={{justifyContent: "space-evenly"}} className={"mainContainer "+globalVariables.colorMode + " footer"}>
+                <SocialLinks src={githubIcon} name={"Github"} link={globalVariables.githubLink}/>
+                <SocialLinks src={linkedinIcon} name={"LinkedIn"} link={globalVariables.linkedinLink}/>
+                <SocialLinks src={hackerrankIcon} name={"HackerRank"} link={globalVariables.hackerrankLink}/>
+                <SocialLinks src={codeforcesIcon} name={"Codeforces"} link={globalVariables.codeforcesLink}/>
+                <SocialLinks src={codechefIcon} name={"CodeChef"} link={globalVariables.codechefLink}/>
+                <SocialLinks src={facebookIcon} name={"Facebook"} link={globalVariables.facebookLink}/>
             </div>
         </div>
 
@@ -41,13 +41,5 @@ const SocialLinks = (props) => {
         </div>
     );
 };
-
-
-Footer.propTypes = {
-    colorMode: PropTypes.string
-};
-Footer.defaultProps= {
-    setColorMode: "light"
-}
 
 export default Footer;

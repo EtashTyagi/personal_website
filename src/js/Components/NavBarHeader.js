@@ -2,19 +2,19 @@ import React from 'react';
 import '../../css/Header.css'
 import PropTypes from "prop-types";
 import {NavLink} from "react-router-dom";
-import globalConstants from "../other/GlobalConstants";
+import globalVariables from "../other/GlobalVariables";
 
 const NavBarHeader = (props) => {
     let i=-1;
     return (
         <div className={"mainContainer "+props.colorMode+" navBarHeader"}>
-            {Object.keys(globalConstants.tabToComponent)
+            {Object.keys(globalVariables.tabToComponent)
                 .map((element, index)=>{
                 i++;
                 return ([
                     (i===0?<div/>:<div className={"vLine"}/>),
                     <NavLink activeClassName={"tabContainer "+ props.colorMode+" selected"}
-                             to={globalConstants.rootDir+"/"+element} className={"tabContainer "+props.colorMode}
+                             to={globalVariables.rootDir+"/"+element} className={"tabContainer "+props.colorMode}
                              onlyActiveOnIndex>
                         {element}
                     </NavLink>

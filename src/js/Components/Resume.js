@@ -1,89 +1,120 @@
 import React, {useState} from 'react';
 import smt from "../../resources/superMarioTunnels.svg"
 import ground from "../../resources/ground.svg"
-import {bool} from "prop-types";
+import "../../css/App.css"
+import "../../css/Resume.css"
+import globalVariables from "../other/GlobalVariables";
 
-let lp=false, rp=false;
+const FPS=60;
+const TUNNEL_PERCENTS=[40, 60, 80]
+
+// TODO: WHEN RELEASED REPLACE STARTS WITH WITH ===
 
 const Resume = () => {
-    const [x, setX]=useState(0);
-    const [leftPressed, setLeftPressed]=useState(false);
-    const [rightPressed, setRightPressed]=useState(false);
-    const [y, setY]=useState(10);
-    const [yVelocity, setYVelocity]=useState(0);
+    const xState=useState(0);
+    const leftState=useState(false);
+    const rightState=useState(false);
+    const jumpState=useState(false);
+    const yState=useState(0);
+    const setYVelocity=useState(0)[1];
+    const dwState=useState([0, 0]);
     const [constructed, setConstructed]=useState(false);
     if (!constructed) {
         setConstructed(()=>{
-
-            gameThread(setX, setY, setYVelocity, setLeftPressed, setRightPressed)
+            gameThread(xState, yState,
+                setYVelocity,
+                leftState, rightState, jumpState,
+                dwState);
             return true;
         })
     }
     return (
-        <div className={"mainContents"} tabIndex={"0"} style={{position:"relative", border: "none", outline:"none"}}
+        <div id={"resCont"} className={"mainContents "+globalVariables.colorMode+" interactiveResume"}
+             tabIndex={"0"} style={{position:"relative", border: "none", outline:"none"}}
              onKeyDown={(event)=>{
-                 handleKeyDown(event, setLeftPressed, setRightPressed, setYVelocity, yVelocity)
+                 handleKeyDown(event, leftState, rightState, jumpState);
              }} onKeyUp={(event)=>{
-            handleKeyUp(event, setLeftPressed, setRightPressed, setYVelocity)}}>
-            <img height={"5%"} src={ground} style={{position:"absolute", bottom: `${y}%`, left:`${x}%`}}/>
-            <img width={"100%"} height={"10%"} src={ground} style={{position:"absolute", bottom:0}}/>
-            <img height={"15%"} style={{position:"absolute", bottom:"10%", left:"40%"}} src={smt}/>
-            <img height={"15%"} style={{position:"absolute", bottom:"10%", left:"60%"}} src={smt}/>
-            <img height={"15%"} style={{position:"absolute", bottom:"10%", left:"80%"}} src={smt}/>
+            handleKeyUp(event, leftState, rightState, jumpState)}}>
+            <span>INTERACTIVE RESUME</span>
+            <img width={"5%"} src={ground} style={{transitionDuration:"0s",position:"absolute", bottom: `calc(${yState[0]}px + 10%)`, left:`${xState[0]}%`}}/>
+            <img width={"100%"} height={"10%"} src={ground} style={{transitionDuration:"0s",position:"absolute", bottom:0}}/>
+            {TUNNEL_PERCENTS.map((element)=>(
+                <img width={"10%"} style={{transitionDuration:"0s",maxHeight: "80%",position:"absolute", bottom:"10%", left:`${element}%`}} src={smt}/>
+            ))}
         </div>
     );
 };
 
-async function gameThread(setX, setY, setYVelocity, setLeftPressed, setRightPressed) {
-
-    let frame=()=>(new Promise((resolve => {
+async function gameThread(xState, yState,
+                    setYVelocity,
+                    leftState, rightState, jumpState,
+                    dwState) {
+    let frame=()=>(new Promise((resolve)=>{
         setTimeout(()=>{
-            let newY=0;
-            setYVelocity((prev)=>(newY=prev-1));
-            setY((prevY)=>{
-                if (prevY+newY<=10) {
-                    setYVelocity(()=>0);
-                    return 10;
+            let newYVel=0;
+            let width=0, height=0;
+            dwState[1](()=>([width=
+                document.getElementById('resCont').clientWidth,
+                height=document.getElementById('resCont').clientHeight]));
+            setYVelocity((prevVel)=>(newYVel=prevVel-0.001*width));
+            yState[1]((prevY)=>{
+                if (prevY+newYVel<=0) {
+                    jumpState[1]((jumping)=>{
+                        if (jumping) {
+                            setYVelocity(()=>(Math.sqrt(2*width*0.001*(width*0.25))))
+                        } else {
+                            setYVelocity(()=>0);
+                        }
+                        return jumping;
+                    })
+                    return 0;
                 } else {
-                    return prevY+newY;
+                    if (prevY+newYVel > 0.9*height-0.06*width) {
+                        setYVelocity(()=>(0));
+                    }
+                    return Math.min(prevY+newYVel, 0.9*height-0.06*width);
                 }
             })
-
-            setLeftPressed((prevLBP)=>{
-                setRightPressed((prevRBP)=>{
-                    if (prevRBP) {
-                        setX((prevX)=>(prevX+1))
-                    } else if (prevLBP) {
-                        setX((prevX)=>(prevX-1))
+            leftState[1]((prevL)=>{
+                rightState[1]((prevR)=>{
+                    if (prevR) {
+                        xState[1]((prevX)=>(Math.min(95, prevX+0.5)))
                     }
-                    return prevRBP;
+                    if (prevL) {
+                        xState[1]((prevX)=>(Math.max(0, prevX-0.5)))
+                    }
+                    return prevR;
                 })
-                return prevLBP;
+                return prevL;
             })
+
             resolve();
-        }, 30);
-    })));
-
-    while (true) {
+        }, 1000/FPS);
+    }))
+    while (window.location.pathname.startsWith(globalVariables.rootDir+"/Resume")) {
         await frame();
+        console.log("WTF")
     }
 }
 
-function handleKeyDown(event, setLeftPressed, setRightPressed, setYVelocity, yVelocity) {
-
-    if (event.keyCode===39) { // right
-        setRightPressed(()=>true)
-    } else if (event.keyCode===37) { // left
-        setLeftPressed(()=>true)
-    } else if (event.key === " " && yVelocity===0) {
-        setYVelocity(()=>10)
+function handleKeyDown(event, leftState, rightState, jumpState) {
+    event.preventDefault();
+    if (event.keyCode===39 || event.key === "d") { // right
+        rightState[1](()=>true)
+    } else if (event.keyCode===37||event.key === "a") { // left
+        leftState[1](()=>true)
+    } else if ((event.key === "w"||event.key===" ")) {
+        jumpState[1](()=>true)
     }
 }
-function handleKeyUp(event, setLeftPressed, setRightPressed) {
-    if (event.keyCode===39) { // right
-        setRightPressed(()=>false)
-    } else if (event.keyCode===37) { // left
-        setLeftPressed(()=>false)
+function handleKeyUp(event, leftState, rightState, jumpState) {
+    event.preventDefault();
+    if (event.keyCode===39 || event.key === "d") { // right
+        rightState[1](()=>false)
+    } else if (event.keyCode===37||event.key === "a") { // left
+        leftState[1](()=>false)
+    } else if ((event.key === "w"||event.key===" ")) {
+        jumpState[1](()=>false)
     }
 }
 

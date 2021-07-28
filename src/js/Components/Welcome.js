@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import "../../css/App.css";
 import "../../css/Welcome.css";
+import globalVariables from "../other/GlobalVariables";
 
 const welcomeSequence=["Hello World!", "Welcome to my website.", "Select a tab to continue."];
 const WRITE_TIME=2000;
 const WIGGLE = 10;
-const Welcome = (props) => {
+const Welcome = () => {
     const [welcomeIndex, setWelcomeIndex] = useState(0);
     const [constructed, setConstructed] = useState(false);
     const [animating, setAnimating] = useState(true);
@@ -17,7 +18,7 @@ const Welcome = (props) => {
         });
     }
     return (
-        <div className={"mainContents welcomeMain "+props.colorMode}
+        <div className={"mainContents welcomeMain "+globalVariables.colorMode}
              style={{fontSize:"7vmin", paddingLeft:10, paddingRight: 10,
                  backgroundPositionX:`calc(50% + ${Math.max(-WIGGLE,
                      Math.min(WIGGLE,mouseOffset.x))}px)`,
@@ -29,7 +30,7 @@ const Welcome = (props) => {
                 }>
             <div style={{width:"100%"}}>
                 <svg xmlns="http://www.w3.org/2000/svg" width={"100%"} height={"100%"}
-                     className={"helloWorld "+props.colorMode + (animating?(" animating"):(""))}
+                     className={"helloWorld "+globalVariables.colorMode + (animating?(" animating"):(""))}
                         style={{animationDuration: `${WRITE_TIME}ms`}}>
                     <text x={`${50+0.01*Math.max(-WIGGLE,
                         Math.min(WIGGLE,mouseOffset.x))}%`} y={`${15+0.01*Math.max(-WIGGLE,
@@ -47,7 +48,7 @@ const Welcome = (props) => {
     );
 };
 async function test(setIndex, index, setAnimating) {
-    let frame = (i)=>(new Promise(resolve => {setTimeout(()=>{setIndex(i);resolve()},2*WRITE_TIME-10)}))
+    let frame = (i)=>(new Promise(resolve => {setTimeout(()=>{setIndex(i);resolve()},2*WRITE_TIME-1)}))
     while (++index < welcomeSequence.length) {
         await frame(index);
     }
