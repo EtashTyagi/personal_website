@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
-import '../../css/Header.css'
-import darkMode from '../../resources/lightModeIcon.svg'
-import lightMode from '../../resources/darkModeIcon.svg'
+import React, {useState, useEffect} from 'react';
+import '../../../css/Header.css'
+import darkMode from '../../../resources/lightModeIcon.svg'
+import lightMode from '../../../resources/darkModeIcon.svg'
 import PropTypes from "prop-types";
-import TypingAnimation from "../Animations/TypingAnimation";
+import TypingAnimation from "../../Animations/TypingAnimation";
 
 const titleSequence=["Etash Tyagi"];
 const WRITING_SPEED=100;
@@ -23,17 +23,19 @@ const TitleHeader = (props) => {
             return (newMode)
         })
     }
+    useEffect(()=>{
+        if (!constructed) {
+            document.documentElement.style.setProperty("color-scheme", "light")
+            setConstructed(()=>{
+                TypingAnimation(setTitleIndex, setCurTitleIndex, titleIndex, titleSequence,
+                    WRITING_SPEED,
+                    WAIT_CHANGE_SPEED,
+                    DELETE_SPEED);
+                return true;
+            });
+        }
+    }, [constructed, titleIndex]);
 
-    if (!constructed) {
-        document.documentElement.style.setProperty("color-scheme", "light")
-        setConstructed(()=>{
-            TypingAnimation(setTitleIndex, setCurTitleIndex, titleIndex, titleSequence,
-                WRITING_SPEED,
-                WAIT_CHANGE_SPEED,
-                DELETE_SPEED);
-            return true;
-        });
-    }
     return (
         <div className={"mainContainer "+colorMode+" titleHeader"}>
             <span className={"headingText "+colorMode+" titleHeader"}>{titleSequence[titleIndex].substr(0, curTitleIndex)}</span>

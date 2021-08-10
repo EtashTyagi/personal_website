@@ -1,8 +1,8 @@
 import React from 'react';
-import '../../css/Header.css'
+import '../../../css/Header.css'
 import PropTypes from "prop-types";
 import {NavLink} from "react-router-dom";
-import globalVariables from "../other/GlobalVariables";
+import globalVariables from "../../other/GlobalVariables";
 
 const NavBarHeader = (props) => {
     let i=-1;

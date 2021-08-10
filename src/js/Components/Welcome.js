@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import "../../css/App.css";
 import "../../css/Welcome.css";
 import globalVariables from "../other/GlobalVariables";
@@ -11,12 +11,14 @@ const Welcome = () => {
     const [constructed, setConstructed] = useState(false);
     const [animating, setAnimating] = useState(true);
     const [mouseOffset, setMouseOffset] = useState({x:0, y:0})
-    if (!constructed) {
-        setConstructed(()=>{
-            test(setWelcomeIndex, welcomeIndex, setAnimating);
-            return true
-        });
-    }
+    useEffect(()=>{
+        if (!constructed) {
+            setConstructed(()=>{
+                test(setWelcomeIndex, welcomeIndex, setAnimating);
+                return true
+            });
+        }
+    }, [constructed, welcomeIndex])
     return (
         <div className={"mainContents welcomeMain "+globalVariables.colorMode}
              style={{fontSize:"7vmin", paddingLeft:10, paddingRight: 10,

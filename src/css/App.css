@@ -26,7 +26,7 @@
 .mainContents{
   display: flex;
   flex-direction: row;
-  min-height: calc(100vh - 132px - 59px);
+  min-height: calc(100vh - 132px - 61px);
 }
 
 .hLine{

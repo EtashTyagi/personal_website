@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import Header from "./Header";
+import Header from "./Header/Header";
 import "../../css/App.css"
 import Footer from "./Footer";
-import {BrowserRouter as Router, Route, Redirect, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 import globalVariables from "../other/GlobalVariables";
 import Welcome from "./Welcome";
 import UnderConstruction from "./UnderConstruction";

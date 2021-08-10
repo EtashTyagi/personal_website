@@ -7,7 +7,6 @@ import githubIcon from "../../resources/githubIcon.svg"
 import hackerrankIcon from "../../resources/hackerrankIcon.svg"
 import codeforcesIcon from "../../resources/codeforcesIcon.svg"
 import codechefIcon from "../../resources/codechefIcon.svg"
-import PropTypes from "prop-types";
 import globalVariables from "../other/GlobalVariables";
 
 const Footer = () => {

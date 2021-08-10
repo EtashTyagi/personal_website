@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import '../../css/Header.css'
-import "../../css/App.css"
+import '../../../css/Header.css'
+import "../../../css/App.css"
 import PropTypes from "prop-types";
 import TitleHeader from "./TitleHeader";
 import NavBarHeader from "./NavBarHeader";
