@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/personal_website/static/css/main.631f451b.chunk.css",
-    "main.js": "/personal_website/static/js/main.a93f5b4a.chunk.js",
-    "main.js.map": "/personal_website/static/js/main.a93f5b4a.chunk.js.map",
-    "runtime-main.js": "/personal_website/static/js/runtime-main.150b1115.js",
-    "runtime-main.js.map": "/personal_website/static/js/runtime-main.150b1115.js.map",
-    "static/js/2.6947e357.chunk.js": "/personal_website/static/js/2.6947e357.chunk.js",
-    "static/js/2.6947e357.chunk.js.map": "/personal_website/static/js/2.6947e357.chunk.js.map",
-    "static/js/3.bfe4e853.chunk.js": "/personal_website/static/js/3.bfe4e853.chunk.js",
-    "static/js/3.bfe4e853.chunk.js.map": "/personal_website/static/js/3.bfe4e853.chunk.js.map",
+    "main.css": "/personal_website/static/css/main.9e8f6a13.chunk.css",
+    "main.js": "/personal_website/static/js/main.3b2628e7.chunk.js",
+    "main.js.map": "/personal_website/static/js/main.3b2628e7.chunk.js.map",
+    "runtime-main.js": "/personal_website/static/js/runtime-main.cc02d538.js",
+    "runtime-main.js.map": "/personal_website/static/js/runtime-main.cc02d538.js.map",
+    "static/js/2.afc4d3b1.chunk.js": "/personal_website/static/js/2.afc4d3b1.chunk.js",
+    "static/js/2.afc4d3b1.chunk.js.map": "/personal_website/static/js/2.afc4d3b1.chunk.js.map",
+    "static/js/3.2469d7d3.chunk.js": "/personal_website/static/js/3.2469d7d3.chunk.js",
+    "static/js/3.2469d7d3.chunk.js.map": "/personal_website/static/js/3.2469d7d3.chunk.js.map",
     "index.html": "/personal_website/index.html",
-    "static/css/main.631f451b.chunk.css.map": "/personal_website/static/css/main.631f451b.chunk.css.map",
-    "static/js/2.6947e357.chunk.js.LICENSE.txt": "/personal_website/static/js/2.6947e357.chunk.js.LICENSE.txt",
+    "static/css/main.9e8f6a13.chunk.css.map": "/personal_website/static/css/main.9e8f6a13.chunk.css.map",
+    "static/js/2.afc4d3b1.chunk.js.LICENSE.txt": "/personal_website/static/js/2.afc4d3b1.chunk.js.LICENSE.txt",
     "static/media/index.css": "/personal_website/static/media/SegoePrint.ca4b2ca4.woff2",
+    "static/media/clouds.5ce46a60.svg": "/personal_website/static/media/clouds.5ce46a60.svg",
     "static/media/codechefIcon.eeab98c6.svg": "/personal_website/static/media/codechefIcon.eeab98c6.svg",
     "static/media/codeforcesIcon.1e8bc162.svg": "/personal_website/static/media/codeforcesIcon.1e8bc162.svg",
     "static/media/darkModeIcon.d6e4d60a.svg": "/personal_website/static/media/darkModeIcon.d6e4d60a.svg",
@@ -27,9 +28,9 @@
     "static/media/superMarioTunnels.4a086321.svg": "/personal_website/static/media/superMarioTunnels.4a086321.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.150b1115.js",
-    "static/js/2.6947e357.chunk.js",
-    "static/css/main.631f451b.chunk.css",
-    "static/js/main.a93f5b4a.chunk.js"
+    "static/js/runtime-main.cc02d538.js",
+    "static/js/2.afc4d3b1.chunk.js",
+    "static/css/main.9e8f6a13.chunk.css",
+    "static/js/main.3b2628e7.chunk.js"
   ]
 }
