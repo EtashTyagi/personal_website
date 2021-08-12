@@ -25,6 +25,7 @@ const App = () => {
                         ((key, index)=>{
                             return <Route
                                 exact path={globalVariables.rootDir+"/"+key}>
+
                                 <UnderConstruction tabName={key}/>
                             </Route>
                         })}

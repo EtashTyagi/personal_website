@@ -13,8 +13,8 @@ const NavBarHeader = (props) => {
                 i++;
                 return ([
                     (i===0?<div/>:<div className={"vLine"}/>),
-                    <NavLink activeClassName={"tabContainer "+ props.colorMode+" selected"}
-                             to={globalVariables.rootDir+"/"+element} className={"tabContainer "+props.colorMode}
+                    <NavLink activeClassName={"tabContainer "+ props.colorMode+" selected notDraggable"}
+                             to={globalVariables.rootDir+"/"+element} className={"tabContainer notDraggable "+props.colorMode}
                              onlyActiveOnIndex>
                         {element}
                     </NavLink>

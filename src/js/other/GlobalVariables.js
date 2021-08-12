@@ -1,7 +1,8 @@
 import Home from "../Components/Home";
-import Resume from "../Components/Resume";
+import Resume from "../Components/Mario Type Resume/Resume";
 import Projects from "../Components/Projects";
 import AboutMe from "../Components/AboutMe";
+import GameThread from "../Animations/GameThread";
 
 const globalVariables={
     tabToComponent: {"Home":Home,
@@ -17,5 +18,6 @@ const globalVariables={
     codechefLink: "https://www.codechef.com/users/etasht",
     facebookLink: "https://facebook.com/etash.tyagi",
     colorMode: "light",
+    currentGameThread: new GameThread(null, null, null, null, null, null)
 }
 export default globalVariables;

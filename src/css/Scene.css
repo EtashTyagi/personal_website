@@ -1,0 +1,23 @@
+.interactiveResume{
+    position: relative;
+    border: none;
+    outline: none;
+    overflow: hidden;
+}
+.dark.interactiveResume{
+    background: linear-gradient(darkblue, darkgreen);
+}
+.light.interactiveResume{
+    background: linear-gradient(deepskyblue, lightgreen);
+}
+.ground{
+    transition-duration: 0s;
+    position: absolute;
+    bottom: 0;
+}
+
+.cloud{
+    position: absolute;
+    z-index: -1;
+    top: 10%;
+}

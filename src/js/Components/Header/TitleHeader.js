@@ -34,13 +34,14 @@ const TitleHeader = (props) => {
                 return true;
             });
         }
-    }, [constructed, titleIndex]);
+        // eslint-disable-next-line
+    }, [constructed]);
 
     return (
         <div className={"mainContainer "+colorMode+" titleHeader"}>
-            <span className={"headingText "+colorMode+" titleHeader"}>{titleSequence[titleIndex].substr(0, curTitleIndex)}</span>
-            <div className={"blinkingRectangle"} style={{fontSize:28}}>|</div>
-            <img draggable={false} className={"icon titleHeader"} src={(colorMode==="dark"?darkMode:lightMode)} alt={"dark/light"}
+            <span className={"headingText notDraggable "+colorMode+" titleHeader"}>{titleSequence[titleIndex].substr(0, curTitleIndex)}</span>
+            <div className={"blinkingRectangle notDraggable"} style={{fontSize:28}}>|</div>
+            <img className={"icon titleHeader notDraggable"} src={(colorMode==="dark"?darkMode:lightMode)} alt={"dark/light"}
                  onClick={()=>onColorChange()}/>
         </div>
     );

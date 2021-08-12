@@ -9,16 +9,18 @@ const WIGGLE = 10;
 const Welcome = () => {
     const [welcomeIndex, setWelcomeIndex] = useState(0);
     const [constructed, setConstructed] = useState(false);
-    const [animating, setAnimating] = useState(true);
+    const [animating, setAnimating] = useState(false);
     const [mouseOffset, setMouseOffset] = useState({x:0, y:0})
     useEffect(()=>{
         if (!constructed) {
             setConstructed(()=>{
                 test(setWelcomeIndex, welcomeIndex, setAnimating);
+                setAnimating(true);
                 return true
             });
         }
-    }, [constructed, welcomeIndex])
+        // eslint-disable-next-line
+    }, [constructed])
     return (
         <div className={"mainContents welcomeMain "+globalVariables.colorMode}
              style={{fontSize:"7vmin", paddingLeft:10, paddingRight: 10,

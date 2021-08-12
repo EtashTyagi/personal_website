@@ -13,15 +13,12 @@
     width: 3px;
     height: 100%;
 }
-
 .mainContainer{
     display: flex;
     position: static;
     width: 100%;
     flex-direction: row;
     align-items: center;
-    user-select: none;
-    -webkit-user-drag: none;
     font-family: "Segoe Print", "Comic Sans MS", sans-serif;
 }
 .mainContainer.titleHeader{
