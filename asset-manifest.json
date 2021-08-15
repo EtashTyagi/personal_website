@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/personal_website/static/css/main.b76925c5.chunk.css",
-    "main.js": "/personal_website/static/js/main.f29ab45d.chunk.js",
-    "main.js.map": "/personal_website/static/js/main.f29ab45d.chunk.js.map",
+    "main.css": "/personal_website/static/css/main.c94daa00.chunk.css",
+    "main.js": "/personal_website/static/js/main.1e9fad48.chunk.js",
+    "main.js.map": "/personal_website/static/js/main.1e9fad48.chunk.js.map",
     "runtime-main.js": "/personal_website/static/js/runtime-main.bde79bc7.js",
     "runtime-main.js.map": "/personal_website/static/js/runtime-main.bde79bc7.js.map",
     "static/js/2.bd4fe58f.chunk.js": "/personal_website/static/js/2.bd4fe58f.chunk.js",
@@ -10,9 +10,13 @@
     "static/js/3.5a771966.chunk.js": "/personal_website/static/js/3.5a771966.chunk.js",
     "static/js/3.5a771966.chunk.js.map": "/personal_website/static/js/3.5a771966.chunk.js.map",
     "index.html": "/personal_website/index.html",
-    "static/css/main.b76925c5.chunk.css.map": "/personal_website/static/css/main.b76925c5.chunk.css.map",
+    "static/css/main.c94daa00.chunk.css.map": "/personal_website/static/css/main.c94daa00.chunk.css.map",
     "static/js/2.bd4fe58f.chunk.js.LICENSE.txt": "/personal_website/static/js/2.bd4fe58f.chunk.js.LICENSE.txt",
+    "static/media/Arduino.59744b96.PNG": "/personal_website/static/media/Arduino.59744b96.PNG",
+    "static/media/ColorSwitch.6736bc66.PNG": "/personal_website/static/media/ColorSwitch.6736bc66.PNG",
+    "static/media/Kaseki.8f1bfcad.jpg": "/personal_website/static/media/Kaseki.8f1bfcad.jpg",
     "static/media/index.css": "/personal_website/static/media/SegoePrint.ca4b2ca4.woff2",
+    "static/media/SelfWebsite.1abe1135.jpg": "/personal_website/static/media/SelfWebsite.1abe1135.jpg",
     "static/media/clouds_dark.d4f9a3c5.svg": "/personal_website/static/media/clouds_dark.d4f9a3c5.svg",
     "static/media/clouds_light.570f63a6.svg": "/personal_website/static/media/clouds_light.570f63a6.svg",
     "static/media/codechefIcon.eeab98c6.svg": "/personal_website/static/media/codechefIcon.eeab98c6.svg",
@@ -33,7 +37,7 @@
   "entrypoints": [
     "static/js/runtime-main.bde79bc7.js",
     "static/js/2.bd4fe58f.chunk.js",
-    "static/css/main.b76925c5.chunk.css",
-    "static/js/main.f29ab45d.chunk.js"
+    "static/css/main.c94daa00.chunk.css",
+    "static/js/main.1e9fad48.chunk.js"
   ]
 }
