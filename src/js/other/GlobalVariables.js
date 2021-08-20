@@ -1,14 +1,36 @@
-import Home from "../Components/Home";
-import Resume from "../Components/Mario Type Resume/Resume";
-import Projects from "../Components/Projects";
-import AboutMe from "../Components/AboutMe";
-import GameThread from "../Animations/GameThread";
+import Home from "../Components/Home/Home";
+import InteractiveResume from "../Components/Resume/Mario Type Resume/InteractiveResume";
+import Projects from "../Components/Projects/Projects";
+import Resume from "../Components/Resume/Resume";
+import Kaseki from "../Components/Projects/Kaseki";
+import ColorSwitch from "../Components/Projects/ColorSwitch";
+import ThisWebsite from "../Components/Projects/ThisWebsite";
+import ArduinoGame from "../Components/Projects/ArduinoGame";
 
 const globalVariables={
     tabToComponent: {"Home":Home,
-                "Resume": Resume,
                 "Projects": Projects,
-                "About Me": AboutMe
+                "Resume": Resume
+    },
+    componentNameToAddress: {
+        "Home":"Home/beta",
+        "Resume": "Resume/beta",
+        "Interactive Resume":"Resume/InteractiveResume/beta",
+        "Projects": "Projects/beta",
+        "Kaseki": "Projects/Kaseki/beta",
+        "Color Switch": "Projects/Color Switch/beta",
+        "This Website": "Projects/This Website/beta",
+        "Arduino Game": "Projects/Arduino Game/beta"
+    },
+    allComponents: {
+        "Home":Home,
+        "Resume": Resume,
+        "Interactive Resume":InteractiveResume,
+        "Projects": Projects,
+        "Kaseki": Kaseki,
+        "Color Switch": ColorSwitch,
+        "This Website": ThisWebsite,
+        "Arduino Game": ArduinoGame
     },
     rootDir: "/personal_website",
     githubLink: "https://github.com/EtashTyagi",
@@ -18,6 +40,5 @@ const globalVariables={
     codechefLink: "https://www.codechef.com/users/etasht",
     facebookLink: "https://facebook.com/etash.tyagi",
     colorMode: "light",
-    currentGameThread: new GameThread(null, null, null, null, null, null)
 }
 export default globalVariables;

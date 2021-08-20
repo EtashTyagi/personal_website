@@ -1,7 +1,7 @@
 @keyframes mainTextAnimation {
     0% {stroke-dashoffset: 69vmin;opacity: 0;fill-opacity: 0;}
     20% {opacity: 1; fill-opacity: 0;}
-    50% {fill-opacity: 0.33;}
+    50% {fill-opacity: 0.4;}
     100% {stroke-dashoffset: 0;}
 }
 
@@ -10,8 +10,7 @@
     -webkit-background-size: cover;
 }
 .welcomeMain.light{
-    background-image: url("../resources/mountains_light.svg");
-    background-color: #FFFB77;
+    background-image: url("../resources/mountains_light.svg"), linear-gradient(skyblue, navajowhite, palegreen);
     transition: 0.5s linear;
 
 }
@@ -20,28 +19,26 @@
     background-color: #1b1e23;
     transition: 0.5s linear;
 }
-.helloWorld{
+.text{
     user-select: none;
     stroke-linejoin: round;
     text-anchor:middle;
     stroke-dasharray: 69vmin;
 }
-.helloWorld.animating{
-    animation: mainTextAnimation linear forwards alternate infinite;
+.text.animating {
+    animation: mainTextAnimation linear forwards alternate infinite 2s;
 }
-.helloWorld:hover{
-    transition-duration: 2s;
-}
-.helloWorld.light {
+
+.text.light {
     stroke:darkblue;
-    fill: darkblue;
-    fill-opacity: 0.33;
+    fill: blue;
+    fill-opacity: 0.4;
     transition-duration: 0.5s;
 }
 
-.helloWorld.dark {
+.text.dark {
     stroke:lightgreen;
     fill: lightgreen;
-    fill-opacity: 0.33;
+    fill-opacity: 0.4;
     transition-duration: 0.5s;
 }

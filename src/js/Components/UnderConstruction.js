@@ -4,10 +4,7 @@ import {NavLink} from "react-router-dom";
 import globalVariables from "../other/GlobalVariables";
 import "../../css/App.css"
 
-// TODO: CANCEL GAME THREAD SOMEWHERE ELSE
-
 const UnderConstruction = (props) => {
-    globalVariables.currentGameThread.stop();
     return (
         <div className={"mainContents "+globalVariables.colorMode+" mainApp"}
              style={{alignItems:"center", justifyContent:"center", flexDirection:"column"}}>

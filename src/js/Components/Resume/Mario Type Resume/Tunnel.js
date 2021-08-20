@@ -1,5 +1,5 @@
 import React from 'react';
-import smt from "../../../resources/superMarioTunnels.svg";
+import smt from "../../../../resources/superMarioTunnels.svg";
 import PropTypes from 'prop-types';
 
 const Tunnel = (props) => {

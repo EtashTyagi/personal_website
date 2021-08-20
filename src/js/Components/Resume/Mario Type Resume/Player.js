@@ -1,5 +1,5 @@
 import React from 'react';
-import man from "../../../resources/standing.svg";
+import man from "../../../../resources/standing.svg";
 import {PropTypes} from "prop-types";
 
 const Player = (props) => {

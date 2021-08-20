@@ -8,19 +8,17 @@ const WRITE_TIME=2000;
 const WIGGLE = 10;
 const Welcome = () => {
     const [welcomeIndex, setWelcomeIndex] = useState(0);
-    const [constructed, setConstructed] = useState(false);
-    const [animating, setAnimating] = useState(false);
+    const [animating, setAnimating] = useState(true);
     const [mouseOffset, setMouseOffset] = useState({x:0, y:0})
     useEffect(()=>{
-        if (!constructed) {
-            setConstructed(()=>{
-                test(setWelcomeIndex, welcomeIndex, setAnimating);
-                setAnimating(true);
-                return true
-            });
-        }
-        // eslint-disable-next-line
-    }, [constructed])
+        setTimeout(()=>{
+            if (welcomeIndex===welcomeSequence.length-1||welcomeSequence.length===0) {
+                setAnimating(false);
+            } else {
+                setWelcomeIndex(welcomeIndex+1)
+            }
+            }, 2*WRITE_TIME-2)
+    }, [welcomeIndex])
     return (
         <div className={"mainContents welcomeMain "+globalVariables.colorMode}
              style={{fontSize:"7vmin", paddingLeft:10, paddingRight: 10,
@@ -34,7 +32,7 @@ const Welcome = () => {
                 }>
             <div style={{width:"100%"}}>
                 <svg xmlns="http://www.w3.org/2000/svg" width={"100%"} height={"100%"}
-                     className={"helloWorld "+globalVariables.colorMode + (animating?(" animating"):(""))}
+                     className={"text "+globalVariables.colorMode + (animating?(" animating"):(""))}
                         style={{animationDuration: `${WRITE_TIME}ms`}}>
                     <text x={`${50+0.01*Math.max(-WIGGLE,
                         Math.min(WIGGLE,mouseOffset.x))}%`} y={`${15+0.01*Math.max(-WIGGLE,
@@ -51,11 +49,4 @@ const Welcome = () => {
         </div>
     );
 };
-async function test(setIndex, index, setAnimating) {
-    let frame = (i)=>(new Promise(resolve => {setTimeout(()=>{setIndex(i);resolve()},2*WRITE_TIME-1)}))
-    while (++index < welcomeSequence.length) {
-        await frame(index);
-    }
-    await new Promise((resolve)=>{setTimeout(()=>{setAnimating(false);resolve()}, WRITE_TIME)});
-}
 export default Welcome;

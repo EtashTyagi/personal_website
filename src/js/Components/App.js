@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Header from "./Header/Header";
 import "../../css/App.css"
 import Footer from "./Footer";
@@ -11,6 +11,9 @@ import UnderConstruction from "./UnderConstruction";
 const App = () => {
     const [colorMode, setColorMode]=useState("light");
     globalVariables.colorMode=colorMode;
+    useEffect(()=>{
+        document.documentElement.style.setProperty("color-scheme", colorMode)
+        }, [colorMode])
     return (
         <div>
             <Router>
@@ -23,17 +26,16 @@ const App = () => {
                         </Route>
                         {Object.keys(globalVariables.tabToComponent).map
                         ((key, index)=>{
-                            return <Route
+                            return <Route key={key}
                                 exact path={globalVariables.rootDir+"/"+key}>
-
                                 <UnderConstruction tabName={key}/>
                             </Route>
                         })}
-                        {Object.keys(globalVariables.tabToComponent).map
+                        {Object.keys(globalVariables.allComponents).map
                         ((key, index)=>{
-                            return <Route
-                                exact path={globalVariables.rootDir+"/"+key+"/beta"}
-                                component={globalVariables.tabToComponent[key]}>
+                            return <Route key={key}
+                                exact path={globalVariables.rootDir+"/"+globalVariables.componentNameToAddress[key]}
+                                component={globalVariables.allComponents[key]}>
                             </Route>
                         })}
                     </Switch>

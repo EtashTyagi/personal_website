@@ -21,7 +21,7 @@ const Header = (props) => {
     if (!constructed) {
         document.documentElement.style.setProperty("color-scheme", "light")
         setConstructed(()=>{
-            collapseRelapseAnimator(setPositionState);
+            collapseRelapseAnimator(setPositionState).then();
             return true;
         });
     }

@@ -15,7 +15,12 @@
     position: absolute;
     bottom: 0;
 }
-
+.overlayButtons{
+    position:absolute;
+    border: none;
+    width:calc(100%/3 - 1px);
+    height:90%;
+}
 .cloud{
     position: absolute;
     z-index: -1;

@@ -3,7 +3,7 @@ import '../../../css/Header.css'
 import darkMode from '../../../resources/lightModeIcon.svg'
 import lightMode from '../../../resources/darkModeIcon.svg'
 import PropTypes from "prop-types";
-import TypingAnimation from "../../Animations/TypingAnimation";
+import globalVariables from "../../other/GlobalVariables";
 
 const titleSequence=["Etash Tyagi"];
 const WRITING_SPEED=100;
@@ -11,38 +11,60 @@ const DELETE_SPEED=69;
 const WAIT_CHANGE_SPEED=690;
 
 const TitleHeader = (props) => {
-    const [colorMode, setColorMode] = useState("light");
-    const [curTitleIndex, setCurTitleIndex]=useState(0);
-    const [constructed, setConstructed]=useState(false);
-    const [titleIndex, setTitleIndex]=useState(0);
+    const [writtenLen, setWrittenLen]=useState(0);
+    const [tick, setTick]=useState(false);
+    const [state, setState]=useState('f'); // f->forwards, b->backwards, w->wait
+    const [sequenceIndex, setSequenceIndex]=useState(0);
+
     const onColorChange=()=>{
-        setColorMode(()=> {
-            let newMode=(colorMode === "dark" ? "light" : "dark");
-            document.documentElement.style.setProperty("color-scheme", newMode)
-            props.setColorMode(newMode)
-            return (newMode)
-        })
+        let newMode=(globalVariables.colorMode === "dark" ? "light" : "dark");
+        props.setColorMode(newMode)
     }
     useEffect(()=>{
-        if (!constructed) {
-            document.documentElement.style.setProperty("color-scheme", "light")
-            setConstructed(()=>{
-                TypingAnimation(setTitleIndex, setCurTitleIndex, titleIndex, titleSequence,
-                    WRITING_SPEED,
-                    WAIT_CHANGE_SPEED,
-                    DELETE_SPEED);
-                return true;
-            });
+        switch (state) {
+            case 'f':
+                setTimeout(()=>{
+                    let changeState = writtenLen+1 >= titleSequence[sequenceIndex].length;
+                    let lastSeq=sequenceIndex===titleSequence.length-1||titleSequence.length===0;
+                    setWrittenLen(Math.min(titleSequence[sequenceIndex].length, writtenLen+1))
+                    if (changeState && lastSeq) {
+                        setState('x');
+                        setTick(!tick);
+                        return;
+                    }
+                    setState(changeState?'w':state);
+                    setTick(!tick);
+                }, WRITING_SPEED)
+                break;
+            case 'b':
+                setTimeout(()=>{
+                    let changeState = writtenLen-1 <= 0;
+                    setWrittenLen(Math.max(writtenLen-1, 0));
+                    if (changeState) {
+                        setSequenceIndex(sequenceIndex+1);
+                        setState('f');
+                    }
+                    setTick(!tick);
+                }, DELETE_SPEED)
+                break;
+            case 'w':
+                setTimeout(()=>{setState('b'); setTick(!tick)},WAIT_CHANGE_SPEED)
+                break;
+            case 'x':
+                console.log("SEQUENCE COMPLETE");
+                break;
+            default:
+                console.error("WRONG SEQ");
         }
         // eslint-disable-next-line
-    }, [constructed]);
+    }, [tick]);
 
     return (
-        <div className={"mainContainer "+colorMode+" titleHeader"}>
-            <span className={"headingText notDraggable "+colorMode+" titleHeader"}>{titleSequence[titleIndex].substr(0, curTitleIndex)}</span>
+        <div className={"mainContainer "+globalVariables.colorMode+" titleHeader"}>
+            <span className={"headingText notDraggable "+globalVariables.colorMode+" titleHeader"}>{titleSequence[sequenceIndex].substr(0, writtenLen)}</span>
             <div className={"blinkingRectangle notDraggable"} style={{fontSize:28}}>|</div>
-            <img className={"icon titleHeader notDraggable"} src={(colorMode==="dark"?darkMode:lightMode)} alt={"dark/light"}
-                 onClick={()=>onColorChange()}/>
+            <img className={"icon titleHeader notDraggable"} src={(globalVariables.colorMode==="dark"?darkMode:lightMode)} alt={"dark/light"}
+                 onClick={()=>{onColorChange()}}/>
         </div>
     );
 };
