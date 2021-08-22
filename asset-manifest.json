@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/personal_website/static/css/main.cb3ae532.chunk.css",
-    "main.js": "/personal_website/static/js/main.5859862a.chunk.js",
-    "main.js.map": "/personal_website/static/js/main.5859862a.chunk.js.map",
+    "main.css": "/personal_website/static/css/main.dd0b9370.chunk.css",
+    "main.js": "/personal_website/static/js/main.e2a90d1c.chunk.js",
+    "main.js.map": "/personal_website/static/js/main.e2a90d1c.chunk.js.map",
     "runtime-main.js": "/personal_website/static/js/runtime-main.bb6903cf.js",
     "runtime-main.js.map": "/personal_website/static/js/runtime-main.bb6903cf.js.map",
     "static/js/2.e4e57803.chunk.js": "/personal_website/static/js/2.e4e57803.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.ba00e050.chunk.js": "/personal_website/static/js/3.ba00e050.chunk.js",
     "static/js/3.ba00e050.chunk.js.map": "/personal_website/static/js/3.ba00e050.chunk.js.map",
     "index.html": "/personal_website/index.html",
-    "static/css/main.cb3ae532.chunk.css.map": "/personal_website/static/css/main.cb3ae532.chunk.css.map",
+    "static/css/main.dd0b9370.chunk.css.map": "/personal_website/static/css/main.dd0b9370.chunk.css.map",
     "static/js/2.e4e57803.chunk.js.LICENSE.txt": "/personal_website/static/js/2.e4e57803.chunk.js.LICENSE.txt",
     "static/media/Arduino.59744b96.PNG": "/personal_website/static/media/Arduino.59744b96.PNG",
     "static/media/ColorSwitch.6736bc66.PNG": "/personal_website/static/media/ColorSwitch.6736bc66.PNG",
@@ -37,7 +37,7 @@
   "entrypoints": [
     "static/js/runtime-main.bb6903cf.js",
     "static/js/2.e4e57803.chunk.js",
-    "static/css/main.cb3ae532.chunk.css",
-    "static/js/main.5859862a.chunk.js"
+    "static/css/main.dd0b9370.chunk.css",
+    "static/js/main.e2a90d1c.chunk.js"
   ]
 }
