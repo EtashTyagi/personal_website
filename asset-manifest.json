@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/personal_website/static/css/main.fe89afc7.chunk.css",
-    "main.js": "/personal_website/static/js/main.746f0936.chunk.js",
-    "main.js.map": "/personal_website/static/js/main.746f0936.chunk.js.map",
+    "main.css": "/personal_website/static/css/main.0c448f94.chunk.css",
+    "main.js": "/personal_website/static/js/main.fe4efa0d.chunk.js",
+    "main.js.map": "/personal_website/static/js/main.fe4efa0d.chunk.js.map",
     "runtime-main.js": "/personal_website/static/js/runtime-main.bb6903cf.js",
     "runtime-main.js.map": "/personal_website/static/js/runtime-main.bb6903cf.js.map",
     "static/js/2.3308965f.chunk.js": "/personal_website/static/js/2.3308965f.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.ba00e050.chunk.js": "/personal_website/static/js/3.ba00e050.chunk.js",
     "static/js/3.ba00e050.chunk.js.map": "/personal_website/static/js/3.ba00e050.chunk.js.map",
     "index.html": "/personal_website/index.html",
-    "static/css/main.fe89afc7.chunk.css.map": "/personal_website/static/css/main.fe89afc7.chunk.css.map",
+    "static/css/main.0c448f94.chunk.css.map": "/personal_website/static/css/main.0c448f94.chunk.css.map",
     "static/js/2.3308965f.chunk.js.LICENSE.txt": "/personal_website/static/js/2.3308965f.chunk.js.LICENSE.txt",
     "static/media/Arduino.59744b96.PNG": "/personal_website/static/media/Arduino.59744b96.PNG",
     "static/media/ColorSwitch.6736bc66.PNG": "/personal_website/static/media/ColorSwitch.6736bc66.PNG",
@@ -26,18 +26,19 @@
     "static/media/githubIcon.9417c10f.svg": "/personal_website/static/media/githubIcon.9417c10f.svg",
     "static/media/ground.50be8c37.svg": "/personal_website/static/media/ground.50be8c37.svg",
     "static/media/hackerrankIcon.49b09f83.svg": "/personal_website/static/media/hackerrankIcon.49b09f83.svg",
-    "static/media/interactive_light.46676397.PNG": "/personal_website/static/media/interactive_light.46676397.PNG",
     "static/media/lightModeIcon.6baac67d.svg": "/personal_website/static/media/lightModeIcon.6baac67d.svg",
     "static/media/linkedinIcon.071f5674.svg": "/personal_website/static/media/linkedinIcon.071f5674.svg",
+    "static/media/mario_dark.212bb3e3.PNG": "/personal_website/static/media/mario_dark.212bb3e3.PNG",
+    "static/media/mario_light.70141f2f.PNG": "/personal_website/static/media/mario_light.70141f2f.PNG",
     "static/media/Welcome.css": "/personal_website/static/media/mountains_light.ba9ded84.svg",
-    "static/media/resume_scr.65aa6902.PNG": "/personal_website/static/media/resume_scr.65aa6902.PNG",
+    "static/media/resume_scr.6d05fa07.PNG": "/personal_website/static/media/resume_scr.6d05fa07.PNG",
     "static/media/standing.b4a2d6e1.svg": "/personal_website/static/media/standing.b4a2d6e1.svg",
     "static/media/superMarioTunnels.4a086321.svg": "/personal_website/static/media/superMarioTunnels.4a086321.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.bb6903cf.js",
     "static/js/2.3308965f.chunk.js",
-    "static/css/main.fe89afc7.chunk.css",
-    "static/js/main.746f0936.chunk.js"
+    "static/css/main.0c448f94.chunk.css",
+    "static/js/main.fe4efa0d.chunk.js"
   ]
 }
