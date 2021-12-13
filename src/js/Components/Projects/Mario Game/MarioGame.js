@@ -7,7 +7,7 @@ const TUNNEL_X_RANGES = [new Range(700, 775), new Range(1000, 1075), new Range(1
 const SCENE_WIDTH=1550;
 
 
-const InteractiveResume = () => {
+const MarioGame = () => {
     return (<Level TUNNEL_X_RANGES={TUNNEL_X_RANGES} SCENE_WIDTH={SCENE_WIDTH}/>)
 };
-export default InteractiveResume;
+export default MarioGame;

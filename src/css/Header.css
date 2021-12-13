@@ -8,6 +8,7 @@
     color: #61dafb;
     transition-duration: 0.25s;
 }
+
 .vLine {
     margin: 0;
     width: 3px;
@@ -31,15 +32,24 @@
     height: 107px;
 }
 .headingText {
+    margin-bottom: 3px;
     padding-left: 10px;
     font-size: 28px;
 }
 .icon.titleHeader {
+    cursor: pointer;
     height: 32px;
     border-radius: 50%;
     transition-duration: 0.15s;
     right: 20px;
     position: absolute !important;
+}
+.titleNav{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
 }
 
 .tabContainer{

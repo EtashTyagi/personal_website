@@ -13,7 +13,7 @@ const Footer = () => {
     return (
         <div style={{zIndex:1}}>
             <div className={"mainContainer "+globalVariables.colorMode + " footer"}>
-                <span style={{paddingLeft:24}}>©Etash Tyagi, 2021</span>
+                <span style={{paddingLeft:24}}>Etash Tyagi, 2021</span>
             </div>
             <div className={"hLine "+globalVariables.colorMode}/>
             <div style={{justifyContent: "space-evenly"}} className={"mainContainer "+globalVariables.colorMode + " footer"}>

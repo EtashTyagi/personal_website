@@ -61,6 +61,7 @@
   }
 }
 .blinkingRectangle{
+  background: transparent !important;
   padding-left: 3px;
   padding-bottom: 5px;
   transform: rotate(5deg);

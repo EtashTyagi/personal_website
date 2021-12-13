@@ -1,5 +1,5 @@
 import Home from "../Components/Home/Home";
-import InteractiveResume from "../Components/Resume/Mario Type Resume/InteractiveResume";
+import MarioGame from "../Components/Projects/Mario Game/MarioGame";
 import Projects from "../Components/Projects/Projects";
 import Resume from "../Components/Resume/Resume";
 import Kaseki from "../Components/Projects/Kaseki";
@@ -13,19 +13,20 @@ const globalVariables={
                 "Resume": Resume
     },
     componentNameToAddress: {
-        "Home":"Home/beta",
-        "Resume": "Resume/beta",
-        "Interactive Resume":"Resume/InteractiveResume/beta",
-        "Projects": "Projects/beta",
-        "Kaseki": "Projects/Kaseki/beta",
-        "Color Switch": "Projects/Color Switch/beta",
-        "This Website": "Projects/This Website/beta",
-        "Arduino Game": "Projects/Arduino Game/beta"
+        "Home":"Home",
+        "Welcome":"",
+        "Resume": "Resume",
+        "Mario Game":"Projects/MarioGame",
+        "Projects": "Projects",
+        "Kaseki": "Projects/Kaseki",
+        "Color Switch": "Projects/Color Switch",
+        "This Website": "Projects/This Website",
+        "Arduino Game": "Projects/Arduino Game"
     },
     allComponents: {
         "Home":Home,
         "Resume": Resume,
-        "Interactive Resume":InteractiveResume,
+        "Mario Game":MarioGame,
         "Projects": Projects,
         "Kaseki": Kaseki,
         "Color Switch": ColorSwitch,

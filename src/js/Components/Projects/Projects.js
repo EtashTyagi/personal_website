@@ -6,6 +6,8 @@ import colorSwitchImg from "../../../resources/ColorSwitch.PNG"
 import kasekiImage from "../../../resources/Kaseki.jpg"
 import arduinoImage from "../../../resources/Arduino.PNG"
 import useWindowDimensions from "../../other/useWindowDimensions";
+import marioLight from "../../../resources/mario_light.PNG";
+import marioDark from "../../../resources/mario_dark.PNG";
 
 // Images must be 1600*900
 
@@ -14,13 +16,13 @@ const Projects = () => {
     const flexDir = (height>0.85*width ? "column" : "row");
     const cardWidth=(height>0.85*width ? 80 : 45);
     const cardStyle={width:`${cardWidth}vw`, maxWidth:"100%"};
-    const align=(flexDir==="column"?"center":"stretch")
+    const mario = {"dark":marioDark, "light":marioLight}
     return (
         <div className={"mainContents " + globalVariables.colorMode} style={
             {justifyContent:"space-evenly",
                 flexWrap:"wrap",
                 flexDirection: flexDir,
-                alignItems:align, paddingTop:"14px", paddingBottom:"14px"}}>
+                alignItems:"center", paddingTop:"14px", paddingBottom:"14px"}}>
 
             <PictureCard link={true}
                          to={globalVariables.rootDir+"/"+globalVariables.componentNameToAddress["Kaseki"]}
@@ -49,6 +51,12 @@ const Projects = () => {
                          body={"Pong android game with arduino controller"}
                          image={arduinoImage}
                          style={cardStyle}/>
+
+            <PictureCard link={true}
+                         to={globalVariables.rootDir+"/"+globalVariables.componentNameToAddress["Mario Game"]}
+                         head={"Mario Game"}
+                         body={"[Incomplete]"}
+                         image={mario[globalVariables.colorMode]} style={cardStyle}/>
 
 
         </div>

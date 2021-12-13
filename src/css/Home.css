@@ -3,11 +3,12 @@ li{ display: block }
 li:before { content: counters(item, ".") " "; counter-increment: item }
 
 .pageOverlay{
+    padding: 10px;
     margin-bottom:15px;
     margin-top: 15px;
     width: 1000px;
-    max-width: 90%;
-    min-width: 76%;
+    max-width: calc(90% - 10px);
+    min-width: calc(76% - 10px);
     border-radius: 10px;
     height: 100%;
     display: flex;
@@ -22,16 +23,22 @@ li:before { content: counters(item, ".") " "; counter-increment: item }
     background-color: white;
 }
 .gradientAnimation.light{
-    animation: image_display_background 8s ease-in-out infinite alternate-reverse;
     background: radial-gradient(forestgreen, slateblue);
     background-size: 200% 200%;
     background-position: 50% 100%;
     width: 100%;
 }
 .gradientAnimation.dark{
-    animation: image_display_background 8s ease-in-out infinite alternate-reverse;
     background: radial-gradient(darkgreen, darkblue);
     background-size: 200% 200%;
     background-position: 50% 100%;
     width: 100%;
+}
+.hLine2.light{
+    background: darkred;
+    height: 2px !important;
+}
+.hLine2.dark{
+    background: yellowgreen;
+    height: 2px !important;
 }

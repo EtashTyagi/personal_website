@@ -18,6 +18,8 @@ const PictureCard = (props) => {
             justifyItems:"start",
             overflowWrap:"break-word",
             margin:"8px",
+            marginBottom:"10px",
+            marginTop: "10px",
             borderRadius:borderRadius,
             display:"flex", flexDirection:"column"}}>
             {props.link?

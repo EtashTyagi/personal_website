@@ -4,6 +4,7 @@ import darkMode from '../../../resources/lightModeIcon.svg'
 import lightMode from '../../../resources/darkModeIcon.svg'
 import PropTypes from "prop-types";
 import globalVariables from "../../other/GlobalVariables";
+import {NavLink} from "react-router-dom";
 
 const titleSequence=["Etash Tyagi"];
 const WRITING_SPEED=100;
@@ -61,8 +62,10 @@ const TitleHeader = (props) => {
 
     return (
         <div className={"mainContainer "+globalVariables.colorMode+" titleHeader"}>
-            <span className={"headingText notDraggable "+globalVariables.colorMode+" titleHeader"}>{titleSequence[sequenceIndex].substr(0, writtenLen)}</span>
-            <div className={"blinkingRectangle notDraggable"} style={{fontSize:28}}>|</div>
+            <NavLink to={globalVariables.rootDir+"/"+globalVariables.componentNameToAddress["Welcome"]} className={"notDraggable "+props.colorMode + " titleNav"}>
+                <span className={"headingText notDraggable "+globalVariables.colorMode+" titleHeader"}>{titleSequence[sequenceIndex].substr(0, writtenLen)}</span>
+                <div className={"blinkingRectangle notDraggable titleHeader "+globalVariables.colorMode} style={{fontSize:28}}>|</div>
+            </NavLink>
             <img className={"icon titleHeader notDraggable"} src={(globalVariables.colorMode==="dark"?darkMode:lightMode)} alt={"dark/light"}
                  onClick={()=>{onColorChange()}}/>
         </div>

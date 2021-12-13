@@ -17,7 +17,7 @@ const Welcome = () => {
             } else {
                 setWelcomeIndex(welcomeIndex+1)
             }
-            }, 2*WRITE_TIME-2)
+            }, (welcomeIndex===welcomeSequence.length-1 ? WRITE_TIME-1:2*WRITE_TIME-1))
     }, [welcomeIndex])
     return (
         <div className={"mainContents welcomeMain "+globalVariables.colorMode}

@@ -24,13 +24,6 @@ const App = () => {
                         <Route exact path={globalVariables.rootDir}>
                             <Welcome colorMode={colorMode}/>
                         </Route>
-                        {Object.keys(globalVariables.tabToComponent).map
-                        ((key, index)=>{
-                            return <Route key={key}
-                                exact path={globalVariables.rootDir+"/"+key}>
-                                <UnderConstruction tabName={key}/>
-                            </Route>
-                        })}
                         {Object.keys(globalVariables.allComponents).map
                         ((key, index)=>{
                             return <Route key={key}
