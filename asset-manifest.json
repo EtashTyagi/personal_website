@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/personal_website/static/css/main.1fe6dc7f.chunk.css",
-    "main.js": "/personal_website/static/js/main.e64d15ff.chunk.js",
-    "main.js.map": "/personal_website/static/js/main.e64d15ff.chunk.js.map",
+    "main.js": "/personal_website/static/js/main.0372ccb4.chunk.js",
+    "main.js.map": "/personal_website/static/js/main.0372ccb4.chunk.js.map",
     "runtime-main.js": "/personal_website/static/js/runtime-main.bb6903cf.js",
     "runtime-main.js.map": "/personal_website/static/js/runtime-main.bb6903cf.js.map",
     "static/js/2.3308965f.chunk.js": "/personal_website/static/js/2.3308965f.chunk.js",
@@ -23,7 +23,7 @@
     "static/media/codeforcesIcon.b3f527cc.svg": "/personal_website/static/media/codeforcesIcon.b3f527cc.svg",
     "static/media/darkModeIcon.d6e4d60a.svg": "/personal_website/static/media/darkModeIcon.d6e4d60a.svg",
     "static/media/facebookIcon.3127a2f8.svg": "/personal_website/static/media/facebookIcon.3127a2f8.svg",
-    "static/media/fcs_ecommerce.450765ea.png": "/personal_website/static/media/fcs_ecommerce.450765ea.png",
+    "static/media/fcs_ecommerce.c8104719.png": "/personal_website/static/media/fcs_ecommerce.c8104719.png",
     "static/media/githubIcon.32feea58.svg": "/personal_website/static/media/githubIcon.32feea58.svg",
     "static/media/ground.0963781e.svg": "/personal_website/static/media/ground.0963781e.svg",
     "static/media/hackerrankIcon.5714839a.svg": "/personal_website/static/media/hackerrankIcon.5714839a.svg",
@@ -40,6 +40,6 @@
     "static/js/runtime-main.bb6903cf.js",
     "static/js/2.3308965f.chunk.js",
     "static/css/main.1fe6dc7f.chunk.css",
-    "static/js/main.e64d15ff.chunk.js"
+    "static/js/main.0372ccb4.chunk.js"
   ]
 }
