@@ -62,7 +62,7 @@ const TitleHeader = (props) => {
 
     return (
         <div className={"mainContainer "+globalVariables.colorMode+" titleHeader"}>
-            <NavLink to={globalVariables.rootDir+"/"+globalVariables.componentNameToAddress["Welcome"]} className={"notDraggable "+props.colorMode + " titleNav"}>
+            <NavLink to={globalVariables.rootDir+globalVariables.componentNameToAddress["Welcome"]} className={"notDraggable "+props.colorMode + " titleNav"}>
                 <span className={"headingText notDraggable "+globalVariables.colorMode+" titleHeader"}>{titleSequence[sequenceIndex].substr(0, writtenLen)}</span>
                 <div className={"blinkingRectangle notDraggable titleHeader "+globalVariables.colorMode} style={{fontSize:28}}>|</div>
             </NavLink>

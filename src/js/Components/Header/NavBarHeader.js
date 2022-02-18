@@ -15,7 +15,7 @@ const NavBarHeader = (props) => {
                     (i===0?<div key={index.toLocaleString()}/>:<div key={index.toLocaleString()} className={"vLine"}/>),
                     <NavLink key={element}
                              activeClassName={"tabContainer "+ globalVariables.colorMode+" selected notDraggable"}
-                             to={globalVariables.rootDir+"/"+element} className={"tabContainer notDraggable "+props.colorMode}>
+                             to={globalVariables.rootDir+element} className={"tabContainer notDraggable "+props.colorMode}>
                         {element}
                     </NavLink>
                 ])

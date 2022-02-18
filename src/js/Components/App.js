@@ -27,7 +27,7 @@ const App = () => {
                         {Object.keys(globalVariables.allComponents).map
                         ((key, index)=>{
                             return <Route key={key}
-                                exact path={globalVariables.rootDir+"/"+globalVariables.componentNameToAddress[key]}
+                                exact path={globalVariables.rootDir+globalVariables.componentNameToAddress[key]}
                                 component={globalVariables.allComponents[key]}>
                             </Route>
                         })}
