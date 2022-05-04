@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.110c286b.chunk.css",
-    "main.js": "/static/js/main.3965c50d.chunk.js",
-    "main.js.map": "/static/js/main.3965c50d.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.2cefc392.js",
-    "runtime-main.js.map": "/static/js/runtime-main.2cefc392.js.map",
+    "main.css": "/static/css/main.3b004632.chunk.css",
+    "main.js": "/static/js/main.4c4af515.chunk.js",
+    "main.js.map": "/static/js/main.4c4af515.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.43d7b864.js",
+    "runtime-main.js.map": "/static/js/runtime-main.43d7b864.js.map",
     "static/js/2.bc44ad66.chunk.js": "/static/js/2.bc44ad66.chunk.js",
     "static/js/2.bc44ad66.chunk.js.map": "/static/js/2.bc44ad66.chunk.js.map",
-    "static/js/3.d8849b0e.chunk.js": "/static/js/3.d8849b0e.chunk.js",
-    "static/js/3.d8849b0e.chunk.js.map": "/static/js/3.d8849b0e.chunk.js.map",
+    "static/js/3.bfe4e853.chunk.js": "/static/js/3.bfe4e853.chunk.js",
+    "static/js/3.bfe4e853.chunk.js.map": "/static/js/3.bfe4e853.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.110c286b.chunk.css.map": "/static/css/main.110c286b.chunk.css.map",
+    "static/css/main.3b004632.chunk.css.map": "/static/css/main.3b004632.chunk.css.map",
     "static/js/2.bc44ad66.chunk.js.LICENSE.txt": "/static/js/2.bc44ad66.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/SegoePrint.ca4b2ca4.woff2",
     "static/media/codechefIcon.33d41e53.svg": "/static/media/codechefIcon.33d41e53.svg",
@@ -20,12 +20,13 @@
     "static/media/githubIcon.32feea58.svg": "/static/media/githubIcon.32feea58.svg",
     "static/media/hackerrankIcon.5714839a.svg": "/static/media/hackerrankIcon.5714839a.svg",
     "static/media/lightModeIcon.6baac67d.svg": "/static/media/lightModeIcon.6baac67d.svg",
-    "static/media/linkedinIcon.7f368f67.svg": "/static/media/linkedinIcon.7f368f67.svg"
+    "static/media/linkedinIcon.7f368f67.svg": "/static/media/linkedinIcon.7f368f67.svg",
+    "static/media/Welcome.css": "/static/media/mountains_light.c3ea20d3.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2cefc392.js",
+    "static/js/runtime-main.43d7b864.js",
     "static/js/2.bc44ad66.chunk.js",
-    "static/css/main.110c286b.chunk.css",
-    "static/js/main.3965c50d.chunk.js"
+    "static/css/main.3b004632.chunk.css",
+    "static/js/main.4c4af515.chunk.js"
   ]
 }
