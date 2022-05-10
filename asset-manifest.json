@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.3b004632.chunk.css",
-    "main.js": "/static/js/main.4c4af515.chunk.js",
-    "main.js.map": "/static/js/main.4c4af515.chunk.js.map",
+    "main.css": "/static/css/main.8f9972a0.chunk.css",
+    "main.js": "/static/js/main.04f77613.chunk.js",
+    "main.js.map": "/static/js/main.04f77613.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.43d7b864.js",
     "runtime-main.js.map": "/static/js/runtime-main.43d7b864.js.map",
     "static/js/2.bc44ad66.chunk.js": "/static/js/2.bc44ad66.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.bfe4e853.chunk.js": "/static/js/3.bfe4e853.chunk.js",
     "static/js/3.bfe4e853.chunk.js.map": "/static/js/3.bfe4e853.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.3b004632.chunk.css.map": "/static/css/main.3b004632.chunk.css.map",
+    "static/css/main.8f9972a0.chunk.css.map": "/static/css/main.8f9972a0.chunk.css.map",
     "static/js/2.bc44ad66.chunk.js.LICENSE.txt": "/static/js/2.bc44ad66.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/SegoePrint.ca4b2ca4.woff2",
     "static/media/codechefIcon.33d41e53.svg": "/static/media/codechefIcon.33d41e53.svg",
@@ -26,7 +26,7 @@
   "entrypoints": [
     "static/js/runtime-main.43d7b864.js",
     "static/js/2.bc44ad66.chunk.js",
-    "static/css/main.3b004632.chunk.css",
-    "static/js/main.4c4af515.chunk.js"
+    "static/css/main.8f9972a0.chunk.css",
+    "static/js/main.04f77613.chunk.js"
   ]
 }
